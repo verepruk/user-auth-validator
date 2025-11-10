@@ -1,0 +1,30 @@
+{
+  "name": "user-auth-validator",
+  "version": "1.0.0",
+  "description": "User Authentication Validator with unit tests and CI/CD",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-junit"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "test-results",
+    "outputName": "junit.xml"
+  }
+}

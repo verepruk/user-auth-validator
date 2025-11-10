@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="14" failures="2" errors="0" time="0.21">
+  <testsuite name="Email Validation" errors="0" failures="2" skipped="0" timestamp="2025-11-10T03:40:27" time="0.189" tests="14">
+    <testcase classname="Email Validation valid email with common domain should return true" name="Email Validation valid email with common domain should return true" time="0.001">
+    </testcase>
+    <testcase classname="Email Validation valid email with subdomain should return true" name="Email Validation valid email with subdomain should return true" time="0">
+    </testcase>
+    <testcase classname="Email Validation email missing @ symbol should return false" name="Email Validation email missing @ symbol should return false" time="0">
+    </testcase>
+    <testcase classname="Email Validation email with spaces should return false" name="Email Validation email with spaces should return false" time="0">
+    </testcase>
+    <testcase classname="Email Validation INTENTIONAL BREAK: expect valid email to return false (should fail)" name="Email Validation INTENTIONAL BREAK: expect valid email to return false (should fail)" time="0.001">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: false
+Received: true
+    at Object.toBe (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/test.js:30:66)
+    at Promise.then.completed (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="Password Validation strong password with uppercase, number and 8+ chars should return true" name="Password Validation strong password with uppercase, number and 8+ chars should return true" time="0">
+    </testcase>
+    <testcase classname="Password Validation password with special chars, uppercase and number should return true" name="Password Validation password with special chars, uppercase and number should return true" time="0">
+    </testcase>
+    <testcase classname="Password Validation password without uppercase should return false" name="Password Validation password without uppercase should return false" time="0">
+    </testcase>
+    <testcase classname="Password Validation password shorter than 8 chars should return false" name="Password Validation password shorter than 8 chars should return false" time="0.001">
+    </testcase>
+    <testcase classname="Password Validation INTENTIONAL BREAK: expect weak password to return true (should fail)" name="Password Validation INTENTIONAL BREAK: expect weak password to return true (should fail)" time="0">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+    at Object.toBe (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/test.js:56:56)
+    at Promise.then.completed (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/sxltan1453/Documents/Semester5/SDLC/Assignment5_RukiyeZeynepVerep/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+    <testcase classname="Credentials Validation valid email and password should return valid result" name="Credentials Validation valid email and password should return valid result" time="0">
+    </testcase>
+    <testcase classname="Credentials Validation invalid email should return appropriate error details" name="Credentials Validation invalid email should return appropriate error details" time="0.001">
+    </testcase>
+    <testcase classname="Edge Cases and Input Validation non-string email should return false" name="Edge Cases and Input Validation non-string email should return false" time="0">
+    </testcase>
+    <testcase classname="Edge Cases and Input Validation non-string password should return false" name="Edge Cases and Input Validation non-string password should return false" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
