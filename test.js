@@ -25,12 +25,10 @@ describe('Email Validation', () => {
     });
 
     // INTENTIONAL BREAK TEST (fails on purpose)
-    /*
     test('INTENTIONAL BREAK: expect valid email to return false (should fail)', () => {
         // This test is designed to fail - expecting false for a valid email
         expect(AuthValidator.validateEmail('correct@email.com')).toBe(false);
     });
-    */
 });
 
 describe('Password Validation', () => {
@@ -53,12 +51,10 @@ describe('Password Validation', () => {
     });
 
     // INTENTIONAL BREAK TEST (fails on purpose)
-    /*
     test('INTENTIONAL BREAK: expect weak password to return true (should fail)', () => {
         // This test is designed to fail - expecting true for a weak password
         expect(AuthValidator.validatePassword('weak')).toBe(true);
     });
-    */
 });
 
 describe('Credentials Validation', () => {
