@@ -1,0 +1,59 @@
+name: Node.js CI - Windows
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm ci
+        npm install jest jest-junit
+    
+    - name: Create test results directory
+      run: New-Item -ItemType Directory -Force -Path test-results
+    
+    - name: Run unit tests with JUnit reporter
+      run: npm run test:ci
+      continue-on-error: false
+    
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results-${{ matrix.node-version }}
+        path: test-results/
+        retention-days: 30
+    
+    - name: Display test summary
+      run: |
+        Write-Host "==========================================" -ForegroundColor Green
+        Write-Host "TEST EXECUTION COMPLETED" -ForegroundColor Green
+        Write-Host "Node.js Version: ${{ matrix.node-version }}" -ForegroundColor Yellow
+        Write-Host "Platform: Windows" -ForegroundColor Yellow
+        Write-Host "==========================================" -ForegroundColor Green
+        
+    - name: Test failure notification
+      if: failure()
+      run: |
+        Write-Host "❌ TESTS FAILED - Check the test results above for details" -ForegroundColor Red
+        exit 1
